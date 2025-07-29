@@ -13,13 +13,10 @@ class AiCodeHelperApplicationTests {
 
     @Resource
     private AiCodeHelper aiCodeHelper;
-    @Test
-    void contextLoads() {
-    }
 
     @Test
     void chat() {
-        aiCodeHelper.chat("hello im programmer kolar!");
+        aiCodeHelper.chat("你好，我是程序员kolar!");
     }
 
     @Test
