@@ -54,7 +54,7 @@ QwenCraft integrates cutting-edge AI engineering practices to deliver a robust a
 
 ## 🛠️ Tech Stack
 
-- **Language**: Java 17+
+- **Language**: Java 21+
 - **AI Framework**: LangChain4j
 - **LLM**: Qwen-Max (via Alibaba Cloud)
 - **Backend**: Spring Boot
