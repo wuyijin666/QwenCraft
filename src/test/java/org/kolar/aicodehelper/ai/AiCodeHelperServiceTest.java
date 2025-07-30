@@ -44,7 +44,11 @@ class AiCodeHelperServiceTest {
     void chatWithRag() {
         String res = aiCodeHelperService.chat(3, "你好，我是程序员mora！请为我提供最常见的6条JVM八股");
         System.out.println(res);
+    }
 
-
+    @Test
+    void chatWithMCP() {
+        String res = aiCodeHelperService.chat(3, "你好，我是程序员mora！请为我提供最常见的6条提升人生格局的话");
+        System.out.println(res);
     }
 }
