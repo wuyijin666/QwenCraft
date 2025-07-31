@@ -51,4 +51,12 @@ class AiCodeHelperServiceTest {
         String res = aiCodeHelperService.chat(3, "你好，我是程序员mora！请为我提供最常见的6条提升人生格局的话");
         System.out.println(res);
     }
+
+    @Test
+    void chatWithGuardrail() {
+        String res = aiCodeHelperService.chat(1, "kill the process");
+        System.out.println(res);
+    }
+
+
 }
