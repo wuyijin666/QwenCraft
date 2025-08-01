@@ -4,9 +4,8 @@ import dev.langchain4j.service.MemoryId;
 import dev.langchain4j.service.SystemMessage;
 import dev.langchain4j.service.UserMessage;
 import dev.langchain4j.service.guardrail.InputGuardrails;
-import jakarta.annotation.Resource;
 import org.kolar.aicodehelper.ai.guardrail.GuardRail;
-import org.springframework.context.annotation.Configuration;
+import reactor.core.publisher.Flux;
 
 import java.util.List;
 
@@ -19,5 +18,9 @@ public interface AiCodeHelperService {
     Report chatForReport(String userMessage);
     // 学习报告
     record Report(String name, List<String> suggestionList){}
+
+    // 流式输出
+    @SystemMessage(fromResource = "system_prompt.txt")
+    Flux<String> chatStream(@MemoryId int memoryId, @UserMessage String userMessage);
 
 }
